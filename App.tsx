@@ -6,7 +6,7 @@ const App = () => {
     // <NavigationContainer>
     //   <Prelogin />
     // </NavigationContainer>
-    <Prelogin />
+    <Prelogin username='' password=''/>
   );
 };
 export default App;
