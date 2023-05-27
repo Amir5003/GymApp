@@ -1,7 +1,8 @@
 import { StyleSheet, Text, View, Button } from 'react-native';
 import Modal from "react-native-modal";
+import OTPContainer from './OTPContiner'
 
-export type Props = {
+export interface Props  {
     showmodal: boolean;
     setshowmodal: () => void
 };
@@ -16,6 +17,9 @@ const Prelogin: React.FC<Props> = ({
             <Modal isVisible={showmodal}>
                 <View style={{ flex: 1, justifyContent: 'center' }}>
                     <Text style={{ color: 'white' }}>Hello!</Text>
+                    <OTPContainer 
+                    codeCount={4}
+                    />
                     <Button title="Hide modal" onPress={setshowmodal} />
                 </View>
             </Modal>
